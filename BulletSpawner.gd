@@ -50,7 +50,7 @@ func _ready() -> void:
 	if Engine.editor_hint:
 		update()
 		return
-	connect('bullet_fired', $'/root/BulletServerRelay','on_bullet_fired')
+	#connect('bullet_fired', $'/root/BulletServerRelay','on_bullet_fired')
 	$Timer.connect('timeout', self, 'fire')
 	$Timer.wait_time = interval
 	self.firing = firing
