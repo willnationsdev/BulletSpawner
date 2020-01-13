@@ -82,7 +82,6 @@ func _draw_shot_preview(border_color: Color, shot_color: Color, scale: float = 1
 		var angle: Vector2 = Vector2.RIGHT.rotated(deg2rad(bullet_spread_degrees / 2))
 		var opposite: Vector2 = angle.rotated(deg2rad(-bullet_spread_degrees))
 		var step_radians: float = deg2rad(bullet_spread_degrees / (bullet_count - 1))
-		var arc_points := PoolVector2Array()
 		draw_arc(Vector2.ZERO, min_dist, angle.angle(), opposite.angle(), arc_point_count / 2, border_color, 0.5)
 		draw_arc(Vector2.ZERO, max_dist, angle.angle(), opposite.angle(), arc_point_count, border_color, 0.5)
 		draw_line(opposite * min_dist, opposite * max_dist, border_color)
